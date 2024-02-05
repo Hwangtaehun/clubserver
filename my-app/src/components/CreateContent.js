@@ -9,6 +9,7 @@ class CreateContent extends Component {
                 <form action='/create_process' method='post' 
                     onSubmit={function(e) {
                         e.preventDefault();
+                        debugger;
                         alert('Submit!!!!!');
                     }.bind(this)}
                 >
