@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import TOC from "./components/TOC";
-import ReadContent from './components/ReadContent';
-import CreateContent from './components/CreateContent';
+import ReadContent from "./components/ReadContent";
+import CreateContent from "./components/CreateContent";
 import Subject from "./components/Subject"
 import Control from "./components/Control"
+
 import './App.css';
 
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       mode:'read',
       selected_content_id: 2,
@@ -23,7 +24,7 @@ class App extends Component {
     }
   }
   render() {
-    //console.log('App render');
+    console.log('App render');
     var _title, _desc, _article = null;
     if(this.state.mode === 'welcome') {
       _title = this.state.welcome.title;
@@ -31,9 +32,9 @@ class App extends Component {
       _article = <ReadContent title={_title} desc={_desc}></ReadContent>
     } else if(this.state.mode === 'read') {
       var i = 0;
-      while(i < this.state.contents.length){
+      while(i < this.state.contents.length) {
         var data = this.state.contents[i];
-        if(data.id === this.state.selected_content_id){
+        if(data.id === this.state.selected_content_id) {
           _title = data.title;
           _desc = data.desc;
           break;
@@ -41,12 +42,12 @@ class App extends Component {
         i = i + 1;
       }
       _article = <ReadContent title={_title} desc={_desc}></ReadContent>
-    } else if(this.state.mode === 'create'){
-      _article = <CreateContent onSumbot={function(_title, _desc){
-        //console.log(_title, _desc);
+    } else  if(this.state.mode === 'create') {
+      _article = <CreateContent onSubmit={function(_title, _desc) {
+        console.log(_title, _desc);
       }.bind(this)}></CreateContent>
     }
-    //console.log("render", this);
+    console.log("render", this);
     return (
       <div className="App">
         <Subject 
@@ -58,14 +59,13 @@ class App extends Component {
         ></Subject>
         <TOC 
           onChangePage={function(id) {
-            //debugger;
             this.setState({
               mode:'read',
               selected_content_id:Number(id)
             });
           }.bind(this)}          
           data={this.state.contents}></TOC>
-        <Control onChangeMode = {function(_mode) {
+        <Control onChangeMode={function(_mode) {
           this.setState({
             mode:_mode
           });
