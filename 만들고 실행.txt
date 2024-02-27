@@ -1,2 +1,5 @@
 npx create-next-app@latest --ts
 npm run dev
+npm install styled-components
+디버깅
+"dev" : "cross-env NODE_OPTINOS='--inspect' next dev
