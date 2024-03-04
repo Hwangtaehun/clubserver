@@ -26,12 +26,12 @@ function logText(text: MyMessage){
 var message: MyMessage = '안녕하세요.';
 logText(message);
 
-type User = {
-    id: string;
-    name: string;
-}
+// type User = {
+//     id: string;
+//     name: string;
+// }
 
-var seho: User;
+// var seho: User;
 
 //별칭은 가능
 // type ID = string;
@@ -53,10 +53,10 @@ type Adult = {
 
 type Teacher = Person & Adult;
 
-//확장 방식
-// type Devaloper = {
-//     skill: string;
-// }
+// 확장 방식
+type Developer = {
+    skill: string;
+}
 
 // var joo: Person & Devaloper = {
 //     name: '형주',
@@ -74,3 +74,39 @@ var sun: Person = {
     age: 30,
     address: '광교'
 };
+
+//3.타입 별칭으로만 정의할 수 있는 타입들
+type MyString = string;
+type StringOrNumber = string | number;
+type Job = Person & Developer;
+
+//제네릭
+type Dropdown<T> = {
+    id: string;
+    title: T;
+}
+
+// 유틸리티 타입
+// type Admin = { name : string; age : number; role: string; }
+// type OnlyName = Pick<Admin, 'name'>
+
+// 맵드 타입
+type Picker< T, K extends keyof T > = {
+    [P in K]: T[P];
+};
+
+interface Admin {
+    role: string;
+    department: string;
+}
+
+interface User extends Admin {
+    id: string;
+    name: string;
+}
+
+interface User{
+    skill: string;
+}
+
+//interface는 상속 가능 하지만 타입 별칭은 상속 불가능

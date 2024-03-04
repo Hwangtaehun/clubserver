@@ -9,4 +9,4 @@ npm init -y
 npm install typescript -D
 
 타입스크립트 디버깅
-./node_modules/typescript/bin/tsc 파일이름.ts
+node ./node_modules/typescript/bin/tsc 파일이름.ts
