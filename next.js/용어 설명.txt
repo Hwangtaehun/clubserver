@@ -1,0 +1,4 @@
+hydration은 단순 HTML을 React application로 초기화하는 작업
+use client == use hydrate
+()로는 url에 종속되지 않는다.
+[]로는 url의 값을 받아온다.
