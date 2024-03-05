@@ -1,0 +1,4 @@
+npm init -y
+npm install react@latest next@latest react-dom@latest
+package.json에서 "scripts"의 내용을 "dev": "next dev"
+폴더생성: app/page.tsx
