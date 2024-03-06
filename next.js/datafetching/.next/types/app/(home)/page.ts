@@ -1,4 +1,4 @@
-// File: D:\Github\typescript_practice\next.js\routing\app\(home)\page.tsx
+// File: D:\Github\typescript_practice\next.js\datafetching\app\(home)\page.tsx
 import * as entry from '../../../../app/(home)/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
