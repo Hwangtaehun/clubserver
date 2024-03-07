@@ -3,3 +3,5 @@ use client == use hydrate
 ()로는 url에 종속되지 않는다.
 []로는 url의 값을 받아온다.
 React App <==> API <==> DB
+전체 스타일: global.css
+componets 스타일: 파일이름.module.css
