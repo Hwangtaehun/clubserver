@@ -1,0 +1,4 @@
+typeof: 해당 타입을 알 수 있는 함수
+trim(): 앞뒤 공백을 제거
+instanceof: 변수가 대상 객체의 프로토타입 체인에 포함되는지 확인하여 true/false를 반환
+in: 객체에 특정 속성이 있으면 true, 그렇지 않으면 false를 반환
