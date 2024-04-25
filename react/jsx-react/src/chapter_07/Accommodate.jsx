@@ -8,10 +8,10 @@ function Accommodate(props){
     const [count, increaseCount, decreaseCount] = useCounter(0);
 
     useEffect(() => {
-        console.log("====================");
+        console.log("======================");
         console.log("useEffect() is called.");
         console.log(`isFull: ${isFull}`);
-    })
+    });
 
     useEffect(() => {
         setIsFull(count >= MAX_CAPACITY);
