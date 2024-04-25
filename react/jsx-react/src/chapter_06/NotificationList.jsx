@@ -44,6 +44,12 @@ class NotificationList extends React.Component {
         }, 1000);
     }
 
+    componentWillUnmount() {
+        if (timer) {
+            clearInterval(timer);
+        }
+    }
+
     render() {
         return(
             <div>
