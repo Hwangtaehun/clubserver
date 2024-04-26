@@ -48,18 +48,20 @@ const CommentLabel = styled.p`
 function PostViewPage(props) {
     const navigate = useNavigate();
     const { postId } = useParams();
+
     const post = data.find((item) => {
-        return item.id === postId
+        return item.id == postId;
     });
-    const [comment, setComment] = useState("");
+
+    const [comment, setComment] = useState('');
 
     return (
         <Wrapper>
             <Container>
                 <Button
-                    title="뒤로 가기"
-                    onClcik={() => {
-                        navigate("/");
+                    title='뒤로 가기'
+                    onClick={() => {
+                        navigate('/');
                     }}
                 />
                 <PostContainer>
@@ -78,10 +80,10 @@ function PostViewPage(props) {
                     }}
                 />
                 <Button
-                    title="댓글 작성하기"
-                    onClcik={() => {
-                        navigate("/");
-                    }} 
+                    title='댓글 작성하기'
+                    onClick={() => {
+                        navigate('/');
+                    }}
                 />
             </Container>
         </Wrapper>
